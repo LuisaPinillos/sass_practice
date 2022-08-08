@@ -1,0 +1,30 @@
+//import another scss files
+@import 'resets';
+@import 'variables';
+
+/* Apply variables
+    when compiled, in the css file the variables appear as the actual value. */
+body {
+    background-color: $primary-color;
+    color: $text-color;
+    // get a map's value
+    font-weight: map-get($font-weights, bold);
+}
+
+// nest
+
+.main {
+    width: 80%;
+    margin: 0 auto;
+
+    // get a map's value
+    // & is iqual name parents -> & inherit parent selectors.
+    // #{&} is iqual to .parentclass .childclass in css
+    #{&}_paragraph {
+        font-weight: map-get($font-weights, bold);
+
+        &:hover {
+            color: #0F3D3E;
+        }
+    }
+}
