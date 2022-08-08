@@ -1,1 +1,1 @@
-Notes and examples about SASS
+Sass notes and examples
